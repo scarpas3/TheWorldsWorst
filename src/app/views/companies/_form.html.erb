@@ -1,37 +1,34 @@
-<%= form_with(model: company, local: true) do |form| %>
+ <%= form_with(model: company) do |form| %>
   <% if company.errors.any? %>
-    <div id="error_explanation">
+    <div style="color: red">
       <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
 
       <ul>
-        <% company.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+        <% company.errors.each do |error| %>
+          <li><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <br>
+  <div>
+    <%= form.text_field :name, class: "form-control", placeholder: "Company Name" %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+  <br>
+  <div>
+    <%= form.text_field :description, class: "form-control", placeholder: "Description" %>
   </div>
-
-  <div class="field">
-    <%= form.label :industry %>
-    <%= form.text_field :industry %>
+  <br>
+  <div>
+    <%= form.text_field :industry, class: "form-control", placeholder: "Type of Company / Industry" %>
   </div>
-
-  <div class="field">
-    <%= form.label :country %>
-    <%= form.text_field :country %>
+  <br>
+  <div>
+    <% form.label :country, style: "display: block", class: "field form-group" %>
+    <%= form.text_field :country, class: "form-control", placeholder: "Country of Origin" %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <br>
+  <div>
+    <%= form.submit class: "btn btn-dark" %>
   </div>
 <% end %>
