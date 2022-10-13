@@ -7,6 +7,8 @@
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
 Rails.application.routes.draw do
+  resources :timelines
+  resources :companies
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # The root page, e.g. www.example.com/, is sent here
   # root 'controller#method_in_controller'
