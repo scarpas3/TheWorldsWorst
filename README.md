@@ -4,6 +4,6 @@
 
 This project will consist of a database where one can view / suggest the most unethical and corrupt companies that currently exist, as well as their histories. My intent with this project is to show people the powerful companies that exist in our world that hold a frightening degree of power over society and world governments
 
-UML Diagram: 
+UML Diagram: https://github.com/scarpas3/TheWorldsWorst/blob/prototype2/docs/UML%20Diagram.pdf
 
 Use Case Descriptions:
