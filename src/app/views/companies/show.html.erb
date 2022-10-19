@@ -17,6 +17,7 @@
   <strong>Country:</strong>
   <%= @company.country %>
 </p>
-
+<br>
+<%= link_to 'View Timeline', timelines_path, class:"btn btn-dark" %>
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>

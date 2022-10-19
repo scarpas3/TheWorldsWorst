@@ -8,10 +8,10 @@
       <li class="nav-item active">
         <%= link_to 'The World\'s Worst', root_path, class:"navbar-brand" %>
       </li>
-      <% if user_signed_in? %>
       <li class="nav-item">
         <%= link_to 'Company List', companies_path, class:"nav-link" %>
       </li>
+      <% if user_signed_in? %>
       <li class="nav-item">
         <%= link_to 'Add Company', new_company_path, class:"nav-link" %>
       </li>
@@ -41,9 +41,5 @@
             </li>
           <% end %>
         </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
