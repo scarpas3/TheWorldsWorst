@@ -1,3 +1,3 @@
 class Timeline < ApplicationRecord
-    belongs_to :company, :primary_key => name
+    belongs_to :company, foreign_key: name
 end
