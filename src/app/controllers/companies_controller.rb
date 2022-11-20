@@ -4,6 +4,7 @@ class CompaniesController < ApplicationController
   # GET /companies or /companies.json
   def index
     @companies = Company.all
+    @companies = @companies.where('id != 0')
   end
 
   # GET /companies/1 or /companies/1.json
