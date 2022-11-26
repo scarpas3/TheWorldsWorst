@@ -6,6 +6,11 @@ class SubmissionsController < ApplicationController
     @submissions = Submission.all
   end
 
+  def approve
+    Submission.find(params[:id]).approve(params[:id])
+    redirect_to :companies, notice: "Approved"
+  end
+
   # GET /submissions/1 or /submissions/1.json
   def show
   end

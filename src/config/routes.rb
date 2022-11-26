@@ -8,13 +8,14 @@
 
 Rails.application.routes.draw do
   resources :events
-  resources :submissions
   resources :timelines
+  resources :submissions
   resources :companies
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # The root page, e.g. www.example.com/, is sent here
   # root 'controller#method_in_controller'
   root 'home#index'
+  post '/submissions/:id', to: 'submissions#approve', as: "approve_submission"
   # Devise authentification pages. This controlls the user login
   # and authentification system.
   devise_for :users

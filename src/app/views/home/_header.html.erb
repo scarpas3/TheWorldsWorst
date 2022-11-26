@@ -12,9 +12,16 @@
         <%= link_to 'Company List', companies_path, class:"nav-link" %>
       </li>
       <% if user_signed_in? %>
-      <li class="nav-item">
-        <%= link_to 'Add Company', new_company_path, class:"nav-link" %>
-      </li>
+        <li class="nav-item">
+          <%= link_to 'Add Company', new_company_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'View Submissions', submissions_path, class:"nav-link" %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to 'Add Submission', new_submission_path, class:"nav-link" %>
+        </li>
       <% end %>
     </ul>
     <ul class="navbar-nav">
