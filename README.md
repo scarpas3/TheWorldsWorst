@@ -7,3 +7,5 @@ This project will consist of a database where one can view / suggest the most un
 UML Diagram: https://github.com/scarpas3/TheWorldsWorst/blob/prototype2/docs/UML%20Diagram.pdf
 
 Use Case Descriptions: https://github.com/scarpas3/TheWorldsWorst/blob/prototype2/docs/Use%20Case%20Descriptions.pdf
+
+Test Cases for Prototype 3: https://github.com/scarpas3/TheWorldsWorst/blob/prototype3/docs/Prototype%203%20Test%20Cases.pdf
