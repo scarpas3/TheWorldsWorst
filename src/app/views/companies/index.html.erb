@@ -20,6 +20,7 @@
         <td><%= link_to 'Show', company %></td>
         <td><%= link_to 'Edit', edit_company_path(company) %></td>
         <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'View Timeline', company_timeline_path(company), method: :post %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +30,3 @@
 
 <%= link_to 'New Company', new_company_path %>
 <br>
-<%= link_to 'View Events', events_path %>

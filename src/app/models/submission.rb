@@ -1,7 +1,6 @@
 class Submission < ApplicationRecord
-    def approve(smid)
-        sm = Submission.find_by(id: smid)
-        company = Company.create!(name: sm.name, country: sm.country, industry: sm.industry, country: sm.country)
-        sm.destroy
+    def approve
+        company = Company.create!(name: self.name, country: self.country, industry: self.industry, country: self.country)
+        self.destroy
     end
 end

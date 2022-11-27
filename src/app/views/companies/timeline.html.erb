@@ -1,0 +1,10 @@
+
+<% l = Company.find(params[:id]) %>
+<p> <%= l.name %></p>
+
+<p>Timeline:</p>
+<ul>
+  <% l.events.each do |event| %>
+    <li><%= event.title %></li>
+  <% end %>
+</ul>

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   # The root page, e.g. www.example.com/, is sent here
   # root 'controller#method_in_controller'
   root 'home#index'
+  post '/companies/:id', to: 'companies#timeline', as: "company_timeline"
   post '/submissions/:id', to: 'submissions#approve', as: "approve_submission"
   # Devise authentification pages. This controlls the user login
   # and authentification system.

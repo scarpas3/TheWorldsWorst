@@ -11,6 +11,9 @@ class CompaniesController < ApplicationController
   def show
   end
 
+  def timeline
+  end
+
   # GET /companies/new
   def new
     @company = Company.new

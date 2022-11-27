@@ -10,27 +10,23 @@
       </ul>
     </div>
   <% end %>
-
+  <br>
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Company Name"%>
   </div>
-
+  <br>
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.text_field :description, class: "form-control", placeholder: "Description" %>
   </div>
-
+  <br>
   <div class="field">
-    <%= form.label :industry %>
-    <%= form.text_field :industry %>
+    <%= form.text_field :industry, class: "form-control", placeholder: "Company's Industry" %>
   </div>
-
+  <br>
   <div class="field">
-    <%= form.label :country %>
-    <%= form.text_field :country %>
+    <%= form.text_field :country, class: "form-control", placeholder: "Country of Origin" %>
   </div>
-
+  <br>
   <div class="actions">
     <%= form.submit %>
   </div>

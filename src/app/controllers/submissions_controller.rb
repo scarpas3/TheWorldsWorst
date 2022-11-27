@@ -7,7 +7,7 @@ class SubmissionsController < ApplicationController
   end
 
   def approve
-    Submission.find(params[:id]).approve(params[:id])
+    Submission.find(params[:id]).approve()
     redirect_to :companies, notice: "Approved"
   end
 
