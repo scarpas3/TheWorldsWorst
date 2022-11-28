@@ -9,7 +9,7 @@
       <th>Country</th>
     </tr>
   </thead>
-
+  <!-- company info with link for timeline-->
   <tbody>
     <% @companies.each do |company| %>
       <tr>
@@ -20,7 +20,7 @@
         <td><%= link_to 'Show', company %></td>
         <td><%= link_to 'Edit', edit_company_path(company) %></td>
         <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'View Timeline', company_timeline_path(company), method: :post %></td>
+        <td><%= link_to 'View Timeline', company_timeline_path(company), method: :post %></td> 
       </tr>
     <% end %>
   </tbody>

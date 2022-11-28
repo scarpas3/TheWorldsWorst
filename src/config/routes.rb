@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   # root 'controller#method_in_controller'
   root 'home#index'
   post '/companies/:id', to: 'companies#timeline', as: "company_timeline"
-  post '/submissions/:id', to: 'submissions#approve', as: "approve_submission"
+  post '/submissions/:id', to: 'submissions#approve', as: "approve_submission" #routes for custom functions
   # Devise authentification pages. This controlls the user login
   # and authentification system.
   devise_for :users

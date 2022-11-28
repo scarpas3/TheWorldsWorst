@@ -13,7 +13,7 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
-    @event.company_name = "";
+    @event.company_name = ""; #need these two lines for association
     @event.company_id = 0;
   end
 
@@ -28,7 +28,7 @@ class EventsController < ApplicationController
     respond_to do |format|
       if @event.save
         d = Company.find_by(name: @event.company_name)
-        @event.update_attribute(:company_id, d.id)
+        @event.update_attribute(:company_id, d.id) #updating associated object upon submission
         format.html { redirect_to event_url(@event), notice: "Event was successfully created." }
         format.json { render :show, status: :created, location: @event }
       else

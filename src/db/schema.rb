@@ -30,18 +30,18 @@ ActiveRecord::Schema.define(version: 2022_11_15_225326) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
-    t.string "company_name"
+    t.string "company_name" #company_id is extracted from company_name
     t.string "description"
     t.integer "year"
     t.integer "company_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["company_id"], name: "index_events_on_company_id"
+    t.index ["company_id"], name: "index_events_on_company_id" #events table uses a foreign key to company
   end
 
   create_table "submissions", force: :cascade do |t|
     t.string "name"
-    t.string "description"
+    t.string "description" #has same fields as company
     t.string "industry"
     t.string "country"
     t.datetime "created_at", precision: 6, null: false

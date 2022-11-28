@@ -3,15 +3,15 @@ class CompaniesController < ApplicationController
 
   # GET /companies or /companies.json
   def index
-    @companies = Company.all
-    @companies = @companies.where('id != 0')
+    @companies = Company.all 
+    @companies = @companies.where('id != 0') # shows every company except the one seeded with an ID of 0
   end
 
   # GET /companies/1 or /companies/1.json
   def show
   end
 
-  def timeline
+  def timeline #controller for timeline page
   end
 
   # GET /companies/new
