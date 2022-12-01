@@ -11,3 +11,5 @@ Use Case Descriptions: https://github.com/scarpas3/TheWorldsWorst/blob/prototype
 Test Cases for Prototype 3: https://github.com/scarpas3/TheWorldsWorst/blob/prototype3/docs/Prototype%203%20Test%20Cases.pdf
 
 Opensource Discussion Document: https://github.com/scarpas3/TheWorldsWorst/blob/prototype3/docs/opensource_maintenance_communication.txt
+
+To Run: Reset the database, create it, then seed it.
