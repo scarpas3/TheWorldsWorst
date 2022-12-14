@@ -4,6 +4,7 @@ class CompaniesController < ApplicationController
   # GET /companies or /companies.json
   def index
     @companies = Company.all 
+    @companies = @companies.searchName(params[:search])
     @companies = @companies.where('id != 0') # shows every company except the one seeded with an ID of 0
   end
 
