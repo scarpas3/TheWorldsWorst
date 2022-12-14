@@ -1,0 +1,33 @@
+<%= form_with(model: submission, local: true) do |form| %>
+  <% if submission.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(submission.errors.count, "error") %> prohibited this submission from being saved:</h2>
+
+      <ul>
+        <% submission.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br>
+  <div class="field">
+    <%= form.text_field :name, class: "form-control", placeholder: "Company Name"%>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.text_field :description, class: "form-control", placeholder: "Description" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.text_field :industry, class: "form-control", placeholder: "Company's Industry" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.text_field :country, class: "form-control", placeholder: "Country of Origin" %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

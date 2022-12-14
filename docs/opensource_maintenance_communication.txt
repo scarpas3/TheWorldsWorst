@@ -1,0 +1,7 @@
+Issues and bugs are best kept track of and organized on GitHub as that is one of its core features. As for open discussion
+of current and future plans, forums like StackOverflow and especially Reddit are great places for wider communities to plan and discuss open source
+software / projects. They let people get feedback from the community in a short period of time as well as pull knowledge / experience from others.
+Preferably, for code to be contributed and accepted into the project, it could follow the same guidelines most open source projects follow where
+an admin(s) choose what code is actually integrated after testing it and making sure it passes test cases. Normally, projects like this have
+small, dedicated communities as opposed to large ones, so the GitHub can be left public for any contributions on personal branches, with pull 
+requests being tested.

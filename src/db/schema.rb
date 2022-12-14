@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_13_010112) do
+ActiveRecord::Schema.define(version: 2022_11_15_225326) do
 
   create_table "app_configs", force: :cascade do |t|
     t.string "name"
@@ -28,10 +28,22 @@ ActiveRecord::Schema.define(version: 2022_10_13_010112) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "timelines", force: :cascade do |t|
-    t.string "company_name"
-    t.integer "year"
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.string "company_name" #company_id is extracted from company_name
     t.string "description"
+    t.integer "year"
+    t.integer "company_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_events_on_company_id" #events table uses a foreign key to company
+  end
+
+  create_table "submissions", force: :cascade do |t|
+    t.string "name"
+    t.string "description" #has same fields as company
+    t.string "industry"
+    t.string "country"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -48,4 +60,5 @@ ActiveRecord::Schema.define(version: 2022_10_13_010112) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "events", "companies"
 end
